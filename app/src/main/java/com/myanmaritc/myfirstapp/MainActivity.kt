@@ -2,6 +2,7 @@ package com.myanmaritc.myfirstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,6 +30,36 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("ActivityLifeCycle:>>>>>","Activity stared........")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("ActivityLifeCycle:>>>>>","Activity resumed....................")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("ActivityLifeCycle:>>>>","Activity pause...................")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("ActivityLifeCycle:>>>>","Activity stop....................")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("ActivityLifeCycle:>>>>","Activity restart...................")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("ActivityLifeCycle:>>>>","Activity destory...................")
     }
 
 }
